@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
-<url><loc>https://basta.tj/</loc><xhtml:link rel="alternate" hreflang="ru" href="https://basta.tj/ru/"/></url>
-<url><loc>https://basta.tj/ru/</loc><xhtml:link rel="alternate" hreflang="tg" href="https://basta.tj/"/></url>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<url><loc>https://basta.tj/</loc></url>
+<url><loc>https://basta.tj/ru/</loc></url>
+<url><loc>https://basta.tj/ussd/</loc></url>
+<url><loc>https://basta.tj/ru/ussd/</loc></url>
+<url><loc>https://basta.tj/mobiton/</loc></url>
+<url><loc>https://basta.tj/ru/mobiton/</loc></url>
+<url><loc>https://basta.tj/peredresaciya/</loc></url>
+<url><loc>https://basta.tj/ru/peredresaciya/</loc></url>
 </urlset>

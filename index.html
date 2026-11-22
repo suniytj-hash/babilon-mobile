@@ -225,13 +225,14 @@ footer b{color:#fff}
   <h2 data-t="u_h">USSD-кодҳои муфид</h2>
   <p class="sub" data-t="u_s">Кодро нусхабардорӣ кунед ё бо як зер занг занед.</p>
   <div id="codes"></div>
+  <p style="margin-top:22px"><a class="btn b-navy" href="/ussd/" data-l-href data-t="u_all">Ҳамаи USSD-кодҳо →</a></p>
 </div></section>
 
 <section id="guide"><div class="w">
   <h2 data-t="g_h">Дастурҳо</h2>
-  <p class="sub" data-t="g_s">Ҳама чиз дар як ҷо — кӯтоҳ ва фаҳмо.</p>
+  <p class="sub"><span data-t="g_s">Ҳама чиз дар як ҷо — кӯтоҳ ва фаҳмо.</span> <a href="/peredresaciya/" data-l-href style="color:var(--red);font-weight:700" data-t="fwl">Интиқоли занг (переадресация) →</a></p>
   <div class="cols">
-    <div class="gd"><div class="ico">🎵</div><h3 data-t="g1h">МобиТОН — ивази гудок</h3><ol data-t="g1" data-html><li>Фаъол кардан: <code>#2004#21#</code></li><li>Интихоби оҳанг: <code>*2202*коди оҳанг#</code></li><li>Ё SMS «reg» ба <code>2202</code></li><li>Хомӯш кардан: <code>#2004#20#</code> ё SMS «unreg» ба 2202</li></ol></div>
+    <div class="gd"><div class="ico">🎵</div><h3 data-t="g1h">МобиТОН — ивази гудок</h3><p style="margin:-4px 0 8px"><a href="/mobiton/" data-l-href style="color:var(--red);font-weight:700" data-t="more">Муфассал →</a></p><ol data-t="g1" data-html><li>Фаъол кардан: <code>#2004#21#</code></li><li>Интихоби оҳанг: <code>*2202*коди оҳанг#</code></li><li>Ё SMS «reg» ба <code>2202</code></li><li>Хомӯш кардан: <code>#2004#20#</code> ё SMS «unreg» ба 2202</li></ol></div>
     <div class="gd"><div class="ico">💸</div><h3 data-t="g2h">Интиқоли маблағ (SMS-Пул)</h3><ol data-t="g2" data-html><li>Аввал паролро муқаррар кунед: <code>*2004#3*PIN1*парол*#</code></li><li>SMS ба <code>2005</code>: парол, рақам, маблағ (бо фосила)</li><li>Аз 0,50 то 100 сомонӣ, ҳаққи хизмат 0,07 сомонӣ</li><li>Дар тавозун бояд камаш 5 сомонӣ боқӣ монад</li></ol></div>
     <div class="gd"><div class="ico">🕵️</div><h3 data-t="g4h">Кӣ бо рақами пинҳон занг зад?</h3><p data-t="g4" data-html>Хизматрасонии «Муайянкунандаи рақами пинҳон» рақамро нишон медиҳад, ҳатто агар зангзананда онро пинҳон карда бошад. Фаъол кардан: <code>*2004#51#</code>, хомӯш кардан: <code>*2004#50#</code>, ҳолат: <code>*2004#5*#</code>. Хизмат пулакӣ аст — тақрибан 6,69 сомонӣ дар як моҳ.</p></div>
     <div class="gd"><div class="ico">🤝</div><h3 data-t="g3h">Пардохти ваъдашуда</h3><ul data-t="g3" data-html><li>Агар маблағ дар тавозун тамом шуда бошад — рақами кӯтоҳ <code>2008</code></li><li>Санҷиши охирин пардохт: <code>#2001*3#</code></li><li>Хизматрасонии иттилоотӣ: <code>918 61-61-61</code></li></ul></div>
@@ -332,6 +333,7 @@ const RU = {
  fq5:"Это сайт компании Вавилон-Мобайл?",fa5:"Нет. Это сайт дилера. Мы подключаем пакеты на ваш номер. По другим вопросам — колл-центр Вавилон: 2006.",
  c_h:"Мы в соцсетях",c_s:"Подписывайтесь — акции и новые пакеты.",
  so1:"Подключить →",so2:"Подписаться →",so3:"Написать →",
+ u_all:"Все USSD-коды →",more:"Подробнее →",fwl:"Переадресация →",
  ft1:"Сайт дилера Вавилон-Мобайл",ft2:"Только подключение интернет-пакетов",ft3:"Официальный сайт компании",ft4:"Колл-центр",ft5:"Дилер Вавилон-Мобайл. Все права защищены. Копирование материалов без разрешения запрещено.",
  term:"<b>📅 Что значит 30 и 90 дней?</b> Это срок действия пакета. Пакет действует 30 или 90 дней со дня подключения. Пакет на 90 дней — на 3 месяца: подключили один раз и пользуетесь 3 месяца.",term_l:"Срок",
  fq0:"Что значит 30 и 90 дней?",fa0:"Это срок действия пакета: 30 дней (1 месяц) или 90 дней (3 месяца) со дня подключения. В этот срок вы пользуетесь объёмом МБ пакета.",
@@ -397,6 +399,7 @@ $("#form").onsubmit=async e=>{
 };
 const PAGE=location.pathname.startsWith("/ru")?"ru":"tj";
 setLang(PAGE);
+if(PAGE==="ru")document.querySelectorAll("[data-l-href]").forEach(a=>a.href="/ru"+a.getAttribute("href"));
 document.addEventListener("click",e=>{const a=e.target.closest('a[href^="#"]');if(!a)return;const el=document.querySelector(a.getAttribute("href"));if(!el)return;e.preventDefault();window.scrollTo({top:el.getBoundingClientRect().top+window.pageYOffset-70,behavior:"smooth"});if(a.getAttribute("href")==="#order")setTimeout(()=>{try{document.getElementById("fph").focus({preventScroll:true})}catch(_){}},600)});
 $("#yr").textContent=new Date().getFullYear();
 </script>
