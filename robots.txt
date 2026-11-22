@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://basta.tj/sitemap.xml
