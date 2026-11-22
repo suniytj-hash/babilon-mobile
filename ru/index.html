@@ -145,6 +145,12 @@ footer b{color:#fff}
 @media(max-width:820px){.bar{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:25;padding:10px 16px;background:rgba(255,251,234,.95);backdrop-filter:blur(10px);border-top:1px solid var(--line)}.bar .btn{width:100%}.fl{bottom:84px}}
 .term{background:#fff;border-left:4px solid var(--y);border-radius:12px;padding:14px 16px;margin:-8px 0 24px;color:#3d3a55;font-size:15px;box-shadow:var(--sh)}
 .term b{color:var(--navy)}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:14px;margin:8px 0 26px}
+.stats div{background:var(--navy);color:#fff;border-radius:18px;padding:18px 20px}
+.stats b{display:block;font-size:32px;font-weight:900;color:var(--y)}.stats span{color:#c9c6ea;font-size:14px}
+.rvs{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:14px}
+.rv{background:#fff;border-radius:18px;padding:20px;box-shadow:var(--sh);display:flex;flex-direction:column;gap:12px}
+.rv p{color:#3d3a55;font-size:15px}.rv span{margin-top:auto;font-weight:700;color:var(--navy);font-size:14px}
 .toast{position:fixed;left:50%;bottom:100px;transform:translateX(-50%);background:var(--ink);color:#fff;padding:10px 18px;border-radius:12px;font-weight:700;opacity:0;transition:.3s;pointer-events:none;z-index:40}
 .toast.on{opacity:1}
 </style>
@@ -246,6 +252,12 @@ footer b{color:#fff}
   </div>
 </div></section>
 
+<section id="reviews"><div class="w">
+  <h2 data-t="rv_h">Мизоҷон дар бораи мо</h2>
+  <div class="stats"><div><b>2017</b><span data-t="st1">аз ҳамин сол кор мекунем</span></div><div><b>12 500+</b><span data-t="st2">обуначӣ дар TikTok</span></div><div><b>30 / 90</b><span data-t="st3">рӯз — мӯҳлати бастаҳо</span></div></div>
+  <div class="rvs"><div class="rv"><p>«Ассалому алейкум ака, раҳмат. Занг задам, дар як дақиқа интернетамро пайваст кардед 👍»</p><span data-t="rv_by">— Мизоҷи мо</span></div><div class="rv"><p>«Ман чанд бор аз шумо интернет гирифтам, ҳамаш бехато. Коратонба барор ака.»</p><span data-t="rv_by">— Мизоҷи мо</span></div><div class="rv"><p>«Ростӣ, аввал бовар накардам. 100 сомонӣ ба баланс партофтам, занг задам, тез пайваст карданд. Раҳмати калон ❤️»</p><span data-t="rv_by">— Мизоҷи мо</span></div><div class="rv"><p>«Хеле қулай будааст, тарофаам ҳам иваз нашуд. Дигар интернетро аз шумо мегирам.»</p><span data-t="rv_by">— Мизоҷи мо</span></div><div class="rv"><p>«Ака раҳмат, мегабайтҳо омаданд. Хизматрасонӣ дар сатҳи олӣ 🔥»</p><span data-t="rv_by">— Мизоҷи мо</span></div><div class="rv"><p>«Чанд моҳ шуд аз ҳамин ҷо интернет мегирам, ягон бор проблема нашуд. Ба дигарон ҳам тавсия медиҳам 👍»</p><span data-t="rv_by">— Мизоҷи мо</span></div></div>
+</div></section>
+
 <section id="faq" style="background:#fff8d6"><div class="w">
   <h2 data-t="faq_h">Саволҳои маъмул</h2><p class="sub"></p>
   <details><summary data-t="fq0">30 ва 90 рӯз чӣ маъно дорад?</summary><p data-t="fa0">Ин мӯҳлати амали баста аст: аз рӯзи пайвасткунӣ 30 рӯз (1 моҳ) ё 90 рӯз (3 моҳ). Дар ин муддат шумо ҳаҷми МБ-и бастаро истифода мебаред.</p></details>
@@ -334,6 +346,7 @@ const RU = {
  c_h:"Мы в соцсетях",c_s:"Подписывайтесь — акции и новые пакеты.",
  so1:"Подключить →",so2:"Подписаться →",so3:"Написать →",
  u_all:"Все USSD-коды →",more:"Подробнее →",fwl:"Переадресация →",
+ rv_h:"Клиенты о нас",rv_by:"— Наш клиент",st1:"работаем с этого года",st2:"подписчиков в TikTok",st3:"дней — срок пакетов",
  ft1:"Сайт дилера Вавилон-Мобайл",ft2:"Только подключение интернет-пакетов",ft3:"Официальный сайт компании",ft4:"Колл-центр",ft5:"Дилер Вавилон-Мобайл. Все права защищены. Копирование материалов без разрешения запрещено.",
  term:"<b>📅 Что значит 30 и 90 дней?</b> Это срок действия пакета. Пакет действует 30 или 90 дней со дня подключения. Пакет на 90 дней — на 3 месяца: подключили один раз и пользуетесь 3 месяца.",term_l:"Срок",
  fq0:"Что значит 30 и 90 дней?",fa0:"Это срок действия пакета: 30 дней (1 месяц) или 90 дней (3 месяца) со дня подключения. В этот срок вы пользуетесь объёмом МБ пакета.",
