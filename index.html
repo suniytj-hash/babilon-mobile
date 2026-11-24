@@ -465,7 +465,7 @@ $("#shwa").href="https://wa.me/?text="+encodeURIComponent(t("sh_t")+" "+SURL);
 $("#shtg").href="https://t.me/share/url?url="+encodeURIComponent(SURL)+"&text="+encodeURIComponent(t("sh_t"));
 $("#shcp").onclick=()=>{if(navigator.share)navigator.share({title:document.title,text:t("sh_t"),url:SURL}).catch(()=>{});else cp(SURL)};
 // Google Analytics: вставить ID вида G-XXXXXXX
-const GA="";
+const GA="GTM-NXHT546G";
 if(GA){const g=document.createElement("script");g.async=1;g.src="https://www.googletagmanager.com/gtag/js?id="+GA;document.head.appendChild(g);window.dataLayer=window.dataLayer||[];window.gtag=function(){dataLayer.push(arguments)};gtag("js",new Date());gtag("config",GA)}
 const ev=(n,p)=>{try{window.gtag&&gtag("event",n,p)}catch(_){}};
 if(PAGE==="ru")document.querySelectorAll("[data-l-href]").forEach(a=>a.href="/ru"+a.getAttribute("href"));
